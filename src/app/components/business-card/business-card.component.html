@@ -1,0 +1,95 @@
+<div class="container">
+    <!-- Form Section -->
+    <div class="input-section">
+      <h2>Saisir les informations de la carte de visite</h2>
+      <form>
+        <div class="form-group">
+          <label for="name">Nom</label>
+          <input type="text" id="name" [(ngModel)]="businessCard.name" name="name" />
+        </div>
+        <div class="form-group">
+          <label for="title">Titre</label>
+          <input type="text" id="title" [(ngModel)]="businessCard.title" name="title" />
+        </div>
+        <div class="form-group">
+          <label for="phone">Téléphone</label>
+          <input type="text" id="phone" [(ngModel)]="businessCard.phone" name="phone" />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="text" id="email" [(ngModel)]="businessCard.email" name="email" />
+        </div>
+        <div class="form-group">
+          <label for="quote">Citation</label>
+          <input type="text" id="quote" [(ngModel)]="businessCard.quote" name="quote" />
+        </div>
+        <div class="form-group">
+          <label for="jobDescription">Description du Travail</label>
+          <textarea
+            id="jobDescription"
+            [(ngModel)]="businessCard.jobDescription"
+            name="jobDescription"
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <label for="followers">Nombre de Followers</label>
+          <input type="number" id="followers" [(ngModel)]="businessCard.followers" name="followers" />
+        </div>
+        <div class="form-group">
+          <label for="following">Nombre de Following</label>
+          <input type="number" id="following" [(ngModel)]="businessCard.following" name="following" />
+        </div>
+        <div class="form-group">
+          <label for="projects">Nombre de Projets</label>
+          <input type="number" id="projects" [(ngModel)]="businessCard.projects" name="projects" />
+        </div>
+      </form>
+    </div>
+  
+    <!-- Card Preview Section -->
+    <div class="card-container">
+      <div class="card">
+        <div class="front">
+          <div class="cover">
+            <img src="assets/images.jpg" alt="Card Cover" />
+          </div>
+          <div class="user">
+            <img class="img-circle" src="assets/Bob_Happy.webp" alt="Profile" />
+          </div>
+          <div class="content">
+            <div class="main">
+              <h3 class="name">{{ businessCard.name || 'Nom' }}</h3>
+              <p class="profession">{{ businessCard.title || 'Titre' }}</p>
+              <p class="text-center">{{ businessCard.quote || '"Your motivational quote here."' }}</p>
+            </div>
+          </div>
+        </div>
+        <div class="back">
+          <div class="header">
+            <h5 class="motto">{{ businessCard.motto || '"To be or not to be, this is my awesome motto!"' }}</h5>
+          </div>
+          <div class="content">
+            <div class="main">
+              <h4 class="text-center">Job Description</h4>
+              <p class="text-center">{{ businessCard.jobDescription || 'Web design, HTML5, CSS3, and more...' }}</p>
+              <div class="stats-container">
+                <div class="stats">
+                  <h4>{{ businessCard.followers || 0 }}</h4>
+                  <p>Followers</p>
+                </div>
+                <div class="stats">
+                  <h4>{{ businessCard.following || 0 }}</h4>
+                  <p>Following</p>
+                </div>
+                <div class="stats">
+                  <h4>{{ businessCard.projects || 0 }}</h4>
+                  <p>Projects</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

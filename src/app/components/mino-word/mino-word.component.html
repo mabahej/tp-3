@@ -1,0 +1,23 @@
+<div>
+    <h2>Mini Word Simulateur</h2>
+  
+    <!-- Input for the rainbow text effect -->
+    <input type="text" [(ngModel)]="typedText" appRainbowText placeholder="Tapez ici et voyez la magie !" />
+  
+    <!-- Input to change the text color -->
+    <input type="text" [(ngModel)]="textColor" placeholder="Entrez une couleur" (input)="updateStyle()" />
+  
+    <!-- Input to change the font size -->
+    <input type="number" [(ngModel)]="fontSize" placeholder="Taille de la police" (input)="updateStyle()" />
+  
+    <!-- Select to change the font family -->
+    <select [(ngModel)]="fontFamily" (change)="updateStyle()">
+      <option *ngFor="let font of fonts" [value]="font">{{ font }}</option>
+    </select>
+  
+    <!-- Display the paragraph with dynamic styles -->
+    <p [ngStyle]="paragraphStyles">
+      {{ typedText || 'Ce texte change en fonction de vos choix.' }}
+    </p>
+  </div>
+  

@@ -1,0 +1,10 @@
+<div
+  #colorBox
+  [style.backgroundColor]="divColor"
+  style="width: 200px; height: 200px; border: 1px solid black;"
+>
+</div>
+
+<input #colorInput type="text" placeholder="Entrez une couleur" (input)="updateColor(colorInput.value)" />
+
+<button (click)="resetColor()">Réinitialiser</button>

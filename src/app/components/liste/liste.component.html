@@ -1,0 +1,7 @@
+
+<ul class="alternating-colors">
+    <li *ngFor="let cv of cvs" (click)="selectCv(cv)">
+      {{ cv.firstname | fullName:cv.name }}
+    </li>
+  </ul>
+  

@@ -1,0 +1,19 @@
+<div style="display: flex;">
+    <!-- Sidebar -->
+    <nav style="width: 200px; padding: 20px; background-color: #f4f4f4;">
+      <ul style="list-style-type: none; padding: 0;">
+        <li><a (click)="navigateTo('/mino-word')">Mino Word</a></li>
+        <li><a (click)="navigateTo('/color-changer')">Color Changer</a></li>
+        <li><a (click)="navigateTo('/business-card')">Business Card</a></li>
+        <li><a (click)="navigateTo('/ex2')">Child/Parent</a></li>
+        <li><a (click)="navigateTo('/cv')">CV</a></li>
+      </ul>
+    </nav>
+  
+    <!-- Main Content Area -->
+    <div style="flex-grow: 1; padding: 20px;">
+      <h1>{{ title }}</h1>
+      <router-outlet></router-outlet> <!-- Displays the routed component -->
+    </div>
+  </div>
+  

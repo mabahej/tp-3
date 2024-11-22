@@ -1,0 +1,8 @@
+<div [style.background]="backgroundColor" class="parent-container">
+    <h1>Composant Parent</h1>
+    <app-ex2child
+      [parentColor]="backgroundColor" 
+      (changeBackgroundColor)="onBackgroundChange($event)">
+    </app-ex2child>
+  </div>
+  

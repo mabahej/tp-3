@@ -1,0 +1,8 @@
+<div class="child-container">
+    <h2>Composant Fils</h2>
+    <p>La couleur actuelle du parent est : <strong>{{ parentColor }}</strong></p>
+    
+    <input [(ngModel)]="myFavoriteColor" placeholder="Entrez votre couleur préférée" />
+    <button (click)="changeParentBackground()">Changer la couleur du Parent</button>
+  </div>
+  

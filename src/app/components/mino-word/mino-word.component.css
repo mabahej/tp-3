@@ -1,0 +1,9 @@
+/* mini-word.component.css */
+p {
+    transition: all 0.3s ease;
+    padding: 10px;
+  }
+  input, select {
+    margin: 10px;
+  }
+  
